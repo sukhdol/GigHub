@@ -23,6 +23,11 @@ textarea {
     max-width: 280px;
 }
 
+/* My Custom CSS*/
+span.field-validation-error {
+    color: #FF0000;
+    font-weight: 700;
+}
 
 /* Boostrap Overrides */
 .navbar-inverse {
@@ -39,6 +44,7 @@ textarea {
 }
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: #cd2827;
     background-color: rgba(205, 40, 39, 0.55);
 }
 
