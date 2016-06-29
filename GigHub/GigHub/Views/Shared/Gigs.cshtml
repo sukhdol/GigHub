@@ -36,7 +36,7 @@
 
                 @if (Model.ShowActions && !gig.IsCanceled)
                 {
-                    <button data-gig-id="@gig.Id" class="btn btn-default btn-sm pull-right js-toggle-attendance">Going?</button>
+                    <button data-newGig-id="@gig.Id" class="btn btn-default btn-sm pull-right js-toggle-attendance">Going?</button>
                 }
             </div>
         </li>
@@ -51,7 +51,7 @@
                 $(".js-toggle-attendance")
                     .click(function (e) {
                         var button = $(e.target);
-                        $.post("/api/attendances", { gigId: button.attr("data-gig-id") })
+                        $.post("/api/attendances", { gigId: button.attr("data-newGig-id") })
                             .done(function () {
                                 button
                                     .removeClass("btn-default")
