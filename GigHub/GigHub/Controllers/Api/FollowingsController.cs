@@ -1,8 +1,8 @@
-using System.Linq;
-using System.Web.Http;
 using GigHub.Dtos;
 using GigHub.Models;
 using Microsoft.AspNet.Identity;
+using System.Linq;
+using System.Web.Http;
 
 namespace GigHub.Controllers.Api
 {
@@ -16,6 +16,7 @@ namespace GigHub.Controllers.Api
             _context = new ApplicationDbContext();
         }
 
+        // Adds the logged-in user to the followings list of the selected artist
         [HttpPost]
         public IHttpActionResult Follow(FollowingDto dto)
         {

@@ -16,6 +16,7 @@ namespace GigHub.Controllers.Api
             _context = new ApplicationDbContext();
         }
 
+        // Updates the gig and changes the IsCanceled to true
         [HttpDelete]
         public IHttpActionResult Cancel(int id)
         {

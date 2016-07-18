@@ -14,6 +14,7 @@ namespace GigHub.App_Start
             Mapper.CreateMap<Notification, NotificationDto>();
         }
 
+        //Map DTOs to their respective classes
         protected override void Configure()
         {
             var config = new MapperConfiguration(cfg =>

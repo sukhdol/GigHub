@@ -19,6 +19,7 @@ namespace GigHub.Controllers.Api
             _context = new ApplicationDbContext();
         }
 
+        // returns a list of new notifications to the logged-in user
         public IEnumerable<NotificationDto> GetNewNotifications()
         {
             var userId = User.Identity.GetUserId();
@@ -32,6 +33,8 @@ namespace GigHub.Controllers.Api
             return notifications.Select(Mapper.Map<Notification, NotificationDto>);
         }
 
+        // if the user has read/opened the new notifications
+        // the notifications are marked as read
         [HttpPost]
         public IHttpActionResult MarkAsRead()
         {
